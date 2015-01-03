@@ -1,0 +1,29 @@
+﻿@model IEnumerable<KeyValuePair<string, string>>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Config Tester</title>
+</head>
+
+<body>
+    <h1>All config values loaded</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model) {
+            <tr>
+                <td>@item.Key</td>
+                <td>@item.Value</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
